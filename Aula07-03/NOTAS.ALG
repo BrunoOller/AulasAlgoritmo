@@ -30,9 +30,6 @@ Inicio
     Se (media >= 0) e (media < 5) então
        Escreval("A Menção do Aluno foi E")
     Fimse
-    Se (media < 0) ou (media > 10) então
-       Escreval("Inválido")
-    Fimse
     
     Escreval("A Primeira Nota do Aluno foi: ", nota01)
     Escreval("A Segunda Nota do Aluno foi: ", nota02)

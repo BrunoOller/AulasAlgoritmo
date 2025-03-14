@@ -8,14 +8,22 @@ Inicio
    Escreval("Informe o valor do bem: ")
    Leia(valorDoBem)
    Escreval("Informe a Forma de Pagamento,")
-   Escreval("Digite 1 para Pix ou 2 para Dinheiro: ")
+   Escreval("Digite 1 para Pix: ")
+   Escreval("Digite 2 para Dinheiro: ")
    leia(formaDePagamento)
+   
+   Escreval("-----------------------------")
+   Escreval("O Valor do Bem era de: R$", valorDoBem:2:2)
    
    Se (formaDePagamento = 1) então
       desconto <- valorDoBem * 0.10
       valorDoBem <- valorDoBem - desconto
-      Escreval("O Valor a Ser Pago no Bem será de: R$", valorDoBem)
    Senão
-      Escreval("O Valor a Ser Pago é de: R$", valorDoBem)
+      desconto <- valorDoBem * 0.05
+      valorDoBem <- valorDoBem - desconto
    Fimse
+   
+   Escreval("O Valor do Desconto é de: R$", desconto:2:2)
+   Escreval("O Valor do Bem com o Desconto é de: R$", valorDoBem:2:2)
+   
 Fimalgoritmo

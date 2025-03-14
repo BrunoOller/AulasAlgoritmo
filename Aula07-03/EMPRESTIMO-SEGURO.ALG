@@ -12,22 +12,23 @@ Inicio
    // Verificando a renda
    Se (renda <= 1500) Então
       Escreval("Renda insuficiente")
-   Senão
-      // Verificando a renda > 1500 e < 2000
-      Se (renda > 1500) e (renda < 2000) Então
-         parcela <- renda * 0.15
-      Senão
-         // Verificando a renda >= 2000 e =< 2500
-         Se (renda >= 2000) e (renda <= 2500) Então
-            parcela <- renda * 0.2
-         Senão
-            // Verificando a renda > 2000
-            Se (renda > 2500) Então
-               parcela <- renda * 0.3
-            Fimse
-         Fimse
-      Fimse
+   FimSe
+   
+   // Verificando a parcela para renda > 1500
+   Se (renda > 1500) e (renda < 2000) Então
+      parcela <- renda * 0.15
    Fimse
+
+   // Verificando a parcela para renda entre 2000 e 2500
+   Se (renda >= 2000) e (renda <= 2500) Então
+      parcela <- renda * 0.2
+   Fimse
+
+   // Parecela para renda maior que 2500...
+   Se (renda > 2500) Então
+      parcela <- renda * 0.3
+   Fimse
+
 
    // Verificando o seguro
    Se (idade < 18) Então
@@ -58,8 +59,8 @@ Inicio
 
    // Exibindo os Resultados
    Escreval("------------------------")
-   Escreval("Sua parcela: R$ ", parcela)
-   Escreval("Seu seguro: R$ ", seguro)
-   Escreval("Total: R$ ", valorTotal)
+   Escreval("Sua parcela: R$ ", parcela:2:2)
+   Escreval("Seu seguro: R$ ", seguro:2:2)
+   Escreval("Total: R$ ", valorTotal:2:2)
 Fimalgoritmo
 
