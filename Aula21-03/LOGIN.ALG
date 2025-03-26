@@ -1,24 +1,28 @@
 Algoritmo "login"
 
 Var
-   usuario, senha: caractere
+   tentativas : inteiro
+   usuario, senha : caractere
 
 Inicio
-   usuario <- "BrunoOller"
-   senha <- "bruno321123"
-   
-   Escreval(" ______________________ ")
-   Escreval("|                      |")
-   Escreval("| FAÇA LOGIN NO GITHUB |")
-   Escreval("|                      |")
-   Escreva("| LOGIN: ")
-   Leia(usuario)
-   Escreval("|                      |")
-   Escreva("| SENHA: ")
-   Leia(senha)
-   Escreval("|                      |")
-   Escreval(" ______________________ ")
-   
-   Se
+   Para tentativas de 1 até 3 Faça
+      Escreva("LOGIN ")
+      Escreval("TENTATIVA ", tentativas, " DE 3")
+
+      Escreval("INFORME SEU USUARIO:")
+      Leia(usuario)
+
+      Escreval("INFORME SUA SENHA:")
+      Leia(senha)
+
+      Se(usuario = "login") e (senha = "321123") então
+         limpatela()
+         Escreval("BEM-VINDO AO SISTEMA!")
+         interrompa
+      Senão
+         limpatela()
+         Escreval("DADOS INCORRETOS. ACESSO NEGADO.")
+      Fimse
+   Fimpara
 
 Fimalgoritmo
