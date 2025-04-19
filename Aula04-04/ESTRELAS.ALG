@@ -1,15 +1,10 @@
 Algoritmo "estrelas"
 
 Var
-   qntdeEstrelas, num: inteiro
+   num, qntdeEstrelas: inteiro
 
 Inicio
-
-    qntdeEstrelas <- -1
-
    Enquanto (num <> 2) faça
-      qntdeEstrelas <- qntdeEstrelas + 1
-   
       Escreval("--------------------------------")
       Escreval(" VOCÊ CONSEGUE VER AS ESTRELAS? ")
       Escreval("--------------------------------")
@@ -19,6 +14,11 @@ Inicio
       Escreval("[2] - NÃO")
       Escreval("--------------------------------")
       Leia(num)
+
+      Se (num = 1) então
+         qntdeEstrelas <- qntdeEstrelas + 1
+      Fimse
+      
       Limpatela()
    FimEnquanto
 
